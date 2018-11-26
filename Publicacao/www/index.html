@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript" src="cordova.js">
+            
+            function goPage2(){
+                var dirPath = dirname(location.href);
+                fullPath = dirPath + "/tela2.html";
+                window.location = fullPath;
+            }
+            
+            function dirname(path){
+                return path.replace(/\\/g,'/').replace(/\/[^\/]*$/, '');            
+            }
+        </script>
+        
+        <!-- Reparo parcial Seção 2-->
+        
+        <div>
+            <!--Relatorio de Manutenção - Molde-->
+            <fieldset>
+                <legend>Relatório de Manutenção - Molde</legend>
+                <img src="../pictures/molde1.png" required> 
+                
+                <!-- Campo para o MOLDE-->
+                <div>
+                    Molde<br>
+                    <input type="number" required> 
+                </div>
+                
+                <!-- RadioButton com a DIMENSÃO-->
+                <div>
+                    <div>
+                        <label>Dimensão:</label>
+                    </div>
+                    <form action="">
+                        <input type="radio" name="dimensao" value="220mm" required>220 mm<br>
+                        <input type="radio" name="dimensao" value="250mm">250 mm<br>
+                    </form>
+                </div>
+
+                <!--Campo para a DATA DE RETIRADA-->
+                <div>
+                    Data de retirada: <br>
+                    <input type="date" name="dataDeRetirada" required>
+                </div>
+                
+                <!--Campo para o VEIO-->
+                <div>
+                    Veio: <br>
+                    <form action="">
+                        <input type="radio" name="veio" value="veio 1" required>Veio 1 <br>
+                        <input type="radio" name="veio" value="veio 2" required>Veio 2 <br>
+                        <input type="radio" name="veio" value="Nao se aplica" required>Não se aplica <br>
+                    </form>
+                </div>
+
+                <!--Campo para o MOTIVO-->
+                <div>
+                    Motivo: <br>
+                    <input type="text" name="motivo" required>
+                </div>
+            </fieldset>
+
+           <!--Saída da Máquina-->
+            <fieldset>
+                <legend>Saída da Máquina</legend>
+                
+                <!--Fixa-->
+                <div>
+                    Fixa: <br>
+                    <input type="number" name="saidaFixa" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaFixaVida" required>
+                </div>
+
+                <!--Livre-->
+                <div>
+                    Livre: <br>
+                    <input type="number" name="saidaLivre" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaLivreVida" required>
+                </div>
+                
+                <!--Direita-->
+                <div>
+                    Direita: <br>
+                    <input type="number" name="saidaDireita" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaDireitaVida" required>
+                </div>
+                
+                <!--Esquerda-->
+                <div>
+                    Esquerda: <br>
+                    <input type="number" name="saidaEsquerda" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaEsquerdaVida" required>
+                 </div>
+            </fieldset>
+            
+            <!--Após Reparo-->
+            <fieldset>
+                <legend>Após Reparo</legend>
+                
+                <!--Fixa-->
+                <div>
+                    Fixa: <br>
+                    <input type="number" name="aposFixa" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposFixaVida" required>
+                </div>
+
+                <!--Livre-->
+                <div>
+                    Livre: <br>
+                    <input type="number" name="aposLivre" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposLivreVida" required>
+                </div>
+                
+                <!--Direita-->
+                <div>
+                    Direita: <br>
+                    <input type="number" name="aposDireita" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposDireitaVida" required>
+                </div>
+                
+                <!--Esquerda-->
+                <div>
+                    Esquerda: <br>
+                    <input type="number" name="aposEsquerda" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposEsquerdaVida" required>
+                 </div>
+            </fieldset>
+            
+            <!--Observações gerais-->
+            <fieldset>
+                <legend>Observações gerais:</legend>
+                <input type="text" name="observacoesGerais">
+            </fieldset>
+            
+            <input name="" value="Próxima" type="button" onClick="location.href='2.html';">
+        </div>
+    </body>
+</html>
