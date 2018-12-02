@@ -1,0 +1,1254 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+    </head>
+    
+    <body>
+
+        <!--Nome do App-->
+        <div id="nomeApp">
+            Reparo Parcial
+        </div>
+
+        <!--****************************CONTEÚDO DA PÁGINA 1****************************-->
+
+        <div id="pagina1">
+            <!--
+                Função original de troca de página
+                
+                <script type="text/javascript" src="cordova.js">
+                
+                function goPage2(){
+                    var dirPath = dirname(location.href);
+                    fullPath = dirPath + "/tela2.html";
+                    window.location = fullPath;
+                }
+                
+                function dirname(path){
+                    return path.replace(/\\/g,'/').replace(/\/[^\/]*$/, '');            
+                }
+            </script> -->
+            
+            <!-- Reparo parcial Seção 2-->
+            
+            <!--Relatorio de Manutenção - Molde-->
+            <fieldset>
+                <legend>Relatório de Manutenção - Molde</legend>
+                <img src="../pictures/molde1.png" required> 
+                
+                <!-- Campo para o MOLDE-->
+                <div>
+                    Molde<br>
+                    <input type="number" required> 
+                </div>
+                
+                <!-- RadioButton com a DIMENSÃO-->
+                <div>
+                    <div>
+                        <label>Dimensão:</label>
+                    </div>
+                    <form action="">
+                        <input type="radio" name="dimensao" value="220mm" required>220 mm<br>
+                        <input type="radio" name="dimensao" value="250mm">250 mm<br>
+                    </form>
+                </div>
+
+                <!--Campo para a DATA DE RETIRADA-->
+                <div>
+                    Data de retirada: <br>
+                    <input type="date" name="dataDeRetirada" required>
+                </div>
+                
+                <!--Campo para o VEIO-->
+                <div>
+                    Veio: <br>
+                    <form action="">
+                        <input type="radio" name="veio" value="veio 1" required>Veio 1 <br>
+                        <input type="radio" name="veio" value="veio 2" required>Veio 2 <br>
+                        <input type="radio" name="veio" value="Nao se aplica" required>Não se aplica <br>
+                    </form>
+                </div>
+
+                <!--Campo para o MOTIVO-->
+                <div>
+                    Motivo: <br>
+                    <input type="text" name="motivo" required>
+                </div>
+            </fieldset>
+
+        <!--Saída da Máquina-->
+            <fieldset>
+                <legend>Saída da Máquina</legend>
+                
+                <!--Fixa-->
+                <div>
+                    Fixa: <br>
+                    <input type="number" name="saidaFixa" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaFixaVida" required>
+                </div>
+
+                <!--Livre-->
+                <div>
+                    Livre: <br>
+                    <input type="number" name="saidaLivre" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaLivreVida" required>
+                </div>
+                
+                <!--Direita-->
+                <div>
+                    Direita: <br>
+                    <input type="number" name="saidaDireita" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaDireitaVida" required>
+                </div>
+                
+                <!--Esquerda-->
+                <div>
+                    Esquerda: <br>
+                    <input type="number" name="saidaEsquerda" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="saidaEsquerdaVida" required>
+                </div>
+            </fieldset>
+            
+            <!--Após Reparo-->
+            <fieldset>
+                <legend>Após Reparo</legend>
+                
+                <!--Fixa-->
+                <div>
+                    Fixa: <br>
+                    <input type="number" name="aposFixa" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposFixaVida" required>
+                </div>
+
+                <!--Livre-->
+                <div>
+                    Livre: <br>
+                    <input type="number" name="aposLivre" required>
+                </div>
+                
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposLivreVida" required>
+                </div>
+                
+                <!--Direita-->
+                <div>
+                    Direita: <br>
+                    <input type="number" name="aposDireita" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposDireitaVida" required>
+                </div>
+                
+                <!--Esquerda-->
+                <div>
+                    Esquerda: <br>
+                    <input type="number" name="aposEsquerda" required>
+                </div>
+                    
+                <div>
+                    Vida(t): <br>
+                    <input type="number" name="aposEsquerdaVida" required>
+                </div>
+            </fieldset>
+            
+            <!--Observações gerais-->
+            <fieldset>
+                <legend>Observações gerais:</legend>
+                <input type="text" name="observacoesGeraisPag1">
+            </fieldset>
+            
+            <!--Botão
+            <input name="" value="Próxima" type="button" onClick="location.href='2.html';">
+            -->
+            <!--Botão para a próxima página-->
+            <button onclick="document.getElementById('pagina2').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none';
+                document.getElementById('pagina3').style.display = 'none';
+                document.getElementById('pagina4').style.display = 'none';
+                document.getElementById('pagina5').style.display = 'none';
+                document.getElementById('pagina6').style.display = 'none';
+                document.getElementById('pagina7').style.display = 'none';"
+                >
+                Próxima
+            </button>
+        </div>
+
+        <!--****************************CONTEÚDO DA PÁGINA 2****************************-->
+        <div id="pagina2">
+
+            <!--Inspeção Inicial-->
+            <fieldset>
+                <legend>Inspeção Inicial</legend>
+
+                <!--Tabela 01-->
+                <table style="width:100%" id="tabela01">
+                    <tr>
+                        <th></th>
+                        <th>Ok</th>
+                        <th>Não Ok</th>
+                    </tr>
+                    <tr>
+                        <td>1. Box, cabos e proteções dos termopares em bom estado.</td>
+                        <td>
+                            <input type="radio" name="entrada1" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada1" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2. Proteções sanfonadas dos cilindros hidráulicos em boas condições.</td>
+                        <td>
+                            <input type="radio" name="entrada2" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada2" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3. Proteções sanfonadas dos tubos telescópico em boas condições.</td>
+                        <td>
+                            <input type="radio" name="entrada3" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada3" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4. Mangueiras hidráulicas, de nitrogênio e de água em bom estado.</td>
+                        <td>
+                            <input type="radio" name="entrada4" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada4" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5. Tubulação hidráulica, nitrogênio e graxa sem amassados ou obstrução.</td>
+                        <td>
+                            <input type="radio" name="entrada5" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada5" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6. Engate rápido (hidráulica, nitrogênio e graxa) em perfeitas condições.</td>
+                        <td>
+                            <input type="radio" name="entrada6" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada6" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7. Distribuidores de graxa em bom estado e sem vazamentos.</td>
+                        <td>
+                            <input type="radio" name="entrada7" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada7" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8. Mangueiras de graxa do rolo de pé e guia lateral em bom estado.</td>
+                        <td>
+                            <input type="radio" name="entrada8" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada8" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9. Tubos flexíveis do rolo de pé e guia lateral em bom estado.</td>
+                        <td>
+                            <input type="radio" name="entrada9" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada9" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10. Grades de spray (cangalha) sem amassados ou avarias.</td>
+                        <td>
+                            <input type="radio" name="entrada10" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada10" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11. Suporte de fixação das grades de spray face larga em boas condições.</td>
+                        <td>
+                            <input type="radio" name="entrada11" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada11" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12. Rolos de pé girando e com bom aspecto superficial.</td>
+                        <td>
+                            <input type="radio" name="entrada12" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada12" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>13. Rolos das guias laterais girando e com bom aspecto superficial.</td>
+                        <td>
+                            <input type="radio" name="entrada13" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada13" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14. Estrutura do molde isenta de break-out.</td>
+                        <td>
+                            <input type="radio" name="entrada14" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada14" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15. Proteções contra break-out em bom estado.</td>
+                        <td>
+                            <input type="radio" name="entrada15" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada15" required>
+                        </td>
+                    </tr>
+                </table>
+
+                <!--Tabela 02-->
+                <table style="width:100%" id="tabela02">
+                    <caption>16. Desgastes e arranhões na superfície das placas</caption>
+                    <tr>
+                        <th></th>
+                        <th>Ok</th>
+                        <th>Não Ok</th>
+                    </tr>
+                    <tr>
+                        <td>16.1. Placa Fixa</td>
+                        <td>
+                            <input type="radio" name="entrada161" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada161" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16.2. Placa Livre</td>
+                        <td>
+                            <input type="radio" name="entrada162" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada162" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16.3. Placa Direita</td>
+                        <td>
+                            <input type="radio" name="entrada163" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada163" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16.4. Placa Esquerda</td>
+                        <td>
+                            <input type="radio" name="entrada164" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="entrada164" required>
+                        </td>
+                    </tr>
+                    
+                </table>
+
+            </fieldset>
+
+            <!--Observações-->
+            <fieldset>
+                <legend>Observações:</legend>
+                <input type="text" name="observacoesPag2">
+            </fieldset>
+
+            <!--Conferido por:-->
+            <fieldset>
+                <legend>Conferido por:</legend>
+                <input type="text" name="conferidoPorPag2" required>
+            </fieldset>
+
+            <!--Data-->
+            <fieldset>
+                <legend>Data:</legend>
+                <input type="date" name="dataPag2" required>
+            </fieldset>
+
+            <!--Botão para a próxima página-->
+            <button onclick="document.getElementById('pagina3').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none';
+                document.getElementById('pagina2').style.display = 'none';
+                document.getElementById('pagina4').style.display = 'none';
+                document.getElementById('pagina5').style.display = 'none';
+                document.getElementById('pagina6').style.display = 'none';
+                document.getElementById('pagina7').style.display = 'none';"
+                >
+                Próxima
+            </button>
+
+            <!--Botão para a página anterior-->
+            <button onclick="document.getElementById('pagina1').style.display = 'block'; 
+                document.getElementById('pagina2').style.display = 'none'
+                document.getElementById('pagina3').style.display = 'none'
+                document.getElementById('pagina4').style.display = 'none'
+                document.getElementById('pagina5').style.display = 'none'
+                document.getElementById('pagina6').style.display = 'none'
+                document.getElementById('pagina7').style.display = 'none'"
+                >
+                Voltar
+            </button>
+
+        </div>
+
+        <!--****************************CONTEÚDO DA PÁGINA 3****************************-->
+        <div id="pagina3">
+            <fieldset>
+                <legend>Folga de canto</legend>
+                <legend>Tolerância: a soma das folgas em um mesmo ponto, placa fixa + livre, deve ser máx. 0,6 mm.</legend> 
+                <img src="../pictures/Tolerancia.png" required>           		              
+            </fieldset>
+
+            <!--Lado Direito - Placa Fixa-->
+            <fieldset>
+                <legend>Lado Direito - Placa Fixa</legend>
+
+                <!--1000-->
+                <div>
+                    Topo - 1000 <br>            
+                    <input type="number" name="direitoPlacaFixaTopo1000" required>
+                </div>
+    
+                <div>
+                    Centro - 1000 <br>            
+                    <input type="number" name="direitoPlacaFixaCentro1000" required>
+                </div>
+    
+                <div>
+                    Base - 1000 <br>            
+                    <input type="number" name="direitoPlacaFixaBase1000" required>
+                </div>
+    
+                <!--1500-->
+                <div>
+                    Topo - 1500 <br>            
+                    <input type="number" name="direitoPlacaFixaTopo1500" required>
+                </div>
+
+                <div>
+                    Centro - 1500 <br>            
+                    <input type="number" name="direitoPlacaFixaCentro1500" required>
+                </div>
+
+                <div>
+                    Base - 1500 <br>            
+                    <input type="number" name="direitoPlacaFixaBase1500" required>
+                </div>
+
+                <!--2100-->
+                <div>
+                    Topo - 2100 <br>            
+                    <input type="number" name="direitoPlacaFixaTopo2100" required>
+                </div>
+    
+                <div>
+                    Centro - 2100 <br>            
+                    <input type="number" name="direitoPlacaFixaCentro2100" required>
+                </div>
+    
+                <div>
+                    Base - 2100 <br>            
+                    <input type="number" name="direitoPlacaFixaBase2100" required>
+                </div>
+            </fieldset>
+            
+            <!--Lado direito - Placa Livre-->
+            <fieldset>
+                <legend>Lado Direito - Placa Livre</legend>
+
+                <!--1000-->
+                <div>
+                    Topo - 1000 <br>            
+                    <input type="number" name="direitoPlacaLivreTopo1000" required>
+                </div>
+    
+                <div>
+                    Centro - 1000 <br>            
+                    <input type="number" name="direitoPlacaLivreCentro1000" required>
+                </div>
+    
+                <div>
+                    Base - 1000 <br>            
+                    <input type="number" name="direitoPlacaLivreBase1000" required>
+                </div>
+    
+                <!--1500-->
+                <div>
+                    Topo - 1500 <br>            
+                    <input type="number" name="direitoPlacaLivreTopo1500" required>
+                </div>
+
+                <div>
+                    Centro - 1500 <br>            
+                    <input type="number" name="direitoPlacaLivreCentro1500" required>
+                </div>
+
+                <div>
+                    Base - 1500 <br>            
+                    <input type="number" name="direitoPlacaLivreBase1500" required>
+                </div>
+
+                <!--2100-->
+                <div>
+                    Topo - 2100 <br>            
+                    <input type="number" name="direitoPlacaLivreTopo2100" required>
+                </div>
+    
+                <div>
+                    Centro - 2100 <br>            
+                    <input type="number" name="direitoPlacaLivreCentro2100" required>
+                </div>
+    
+                <div>
+                    Base - 2100 <br>            
+                    <input type="number" name="direitoPlacaLivreBase2100" required>
+                </div>
+            </fieldset>
+
+             <!--Lado Esquerdo - Placa Fixa-->
+             <fieldset>
+                    <legend>Lado Esquerdo - Placa Fixa</legend>
+    
+                    <!--1000-->
+                    <div>
+                        Topo - 1000 <br>            
+                        <input type="number" name="esquerdoPlacaFixaTopo1000" required>
+                    </div>
+        
+                    <div>
+                        Centro - 1000 <br>            
+                        <input type="number" name="esquerdoPlacaFixaCentro1000" required>
+                    </div>
+        
+                    <div>
+                        Base - 1000 <br>            
+                        <input type="number" name="esquerdoPlacaFixaBase1000" required>
+                    </div>
+        
+                    <!--1500-->
+                    <div>
+                        Topo - 1500 <br>            
+                        <input type="number" name="esquerdoPlacaFixaTopo1500" required>
+                    </div>
+    
+                    <div>
+                        Centro - 1500 <br>            
+                        <input type="number" name="esquerdoPlacaFixaCentro1500" required>
+                    </div>
+    
+                    <div>
+                        Base - 1500 <br>            
+                        <input type="number" name="esquerdoPlacaFixaBase1500" required>
+                    </div>
+    
+                    <!--2100-->
+                    <div>
+                        Topo - 2100 <br>            
+                        <input type="number" name="esquerdoPlacaFixaTopo2100" required>
+                    </div>
+        
+                    <div>
+                        Centro - 2100 <br>            
+                        <input type="number" name="esquerdoPlacaFixaCentro2100" required>
+                    </div>
+        
+                    <div>
+                        Base - 2100 <br>            
+                        <input type="number" name="esquerdoPlacaFixaBase2100" required>
+                    </div>
+                </fieldset>
+
+                <!--Lado Esquerdo - Placa Livre-->
+                <fieldset>
+                    <legend>Lado Esquerdo - Placa Livre</legend>
+    
+                    <!--1000-->
+                    <div>
+                        Topo - 1000 <br>            
+                        <input type="number" name="esquerdoPlacaLivreTopo1000" required>
+                    </div>
+        
+                    <div>
+                        Centro - 1000 <br>            
+                        <input type="number" name="esquerdoPlacaLivreCentro1000" required>
+                    </div>
+        
+                    <div>
+                        Base - 1000 <br>            
+                        <input type="number" name="esquerdoPlacaLivreBase1000" required>
+                    </div>
+        
+                    <!--1500-->
+                    <div>
+                        Topo - 1500 <br>            
+                        <input type="number" name="esquerdoPlacaLivreTopo1500" required>
+                    </div>
+    
+                    <div>
+                        Centro - 1500 <br>            
+                        <input type="number" name="esquerdoPlacaLivreCentro1500" required>
+                    </div>
+    
+                    <div>
+                        Base - 1500 <br>            
+                        <input type="number" name="esquerdoPlacaLivreBase1500" required>
+                    </div>
+    
+                    <!--2100-->
+                    <div>
+                        Topo - 2100 <br>            
+                        <input type="number" name="esquerdoPlacaLivreTopo2100" required>
+                    </div>
+        
+                    <div>
+                        Centro - 2100 <br>            
+                        <input type="number" name="esquerdoPlacaLivreCentro2100" required>
+                    </div>
+        
+                    <div>
+                        Base - 2100 <br>            
+                        <input type="number" name="esquerdoPlacaLivreBase2100" required>
+                    </div>
+                </fieldset>
+
+                <!--Botão para a próxima página-->
+                <button onclick="document.getElementById('pagina4').style.display = 'block'; 
+                    document.getElementById('pagina1').style.display = 'none';
+                    document.getElementById('pagina2').style.display = 'none';
+                    document.getElementById('pagina3').style.display = 'none';
+                    document.getElementById('pagina5').style.display = 'none';
+                    document.getElementById('pagina6').style.display = 'none';
+                    document.getElementById('pagina7').style.display = 'none';"
+                    >
+                    Próxima
+                </button>
+    
+                <!--Botão para a página anterior-->
+                <button onclick="document.getElementById('pagina2').style.display = 'block'; 
+                    document.getElementById('pagina1').style.display = 'none'
+                    document.getElementById('pagina3').style.display = 'none'
+                    document.getElementById('pagina4').style.display = 'none'
+                    document.getElementById('pagina5').style.display = 'none'
+                    document.getElementById('pagina6').style.display = 'none'
+                    document.getElementById('pagina7').style.display = 'none'"
+                    >
+                    Voltar
+                </button>
+        </div>
+
+        
+        
+
+        <!--****************************CONTEÚDO DA PÁGINA 4****************************-->
+        <div id="pagina4">
+            <fieldset>
+                <legend>Aferição do Box dos Termopares</legend>
+                <img src="../pictures/aferição.png" required>
+            </fieldset> 
+
+            <!--Conferido por:-->
+            <fieldset>
+                <legend>Conferido por:</legend>
+                <input type="text" name="conferidoPorPag4" required>
+            </fieldset>
+
+            <!--Data-->
+            <fieldset>
+                <legend>Data:</legend>
+                <input type="date" name="dataPag4" required>
+            </fieldset>
+
+            <!--Botão para a próxima página-->
+            <button onclick="document.getElementById('pagina5').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none';
+                document.getElementById('pagina2').style.display = 'none';
+                document.getElementById('pagina3').style.display = 'none';
+                document.getElementById('pagina4').style.display = 'none';
+                document.getElementById('pagina6').style.display = 'none';
+                document.getElementById('pagina7').style.display = 'none';"
+                >
+                Próxima
+            </button>
+
+            <!--Botão para a página anterior-->
+            <button onclick="document.getElementById('pagina3').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none'
+                document.getElementById('pagina2').style.display = 'none'
+                document.getElementById('pagina4').style.display = 'none'
+                document.getElementById('pagina5').style.display = 'none'
+                document.getElementById('pagina6').style.display = 'none'
+                document.getElementById('pagina7').style.display = 'none'"
+                >
+                Voltar
+            </button>
+         </div>
+
+        <!--****************************CONTEÚDO DA PÁGINA 5****************************-->
+
+        <div id="pagina5">
+            <fieldset>
+                <legend>Check-list Elétrico</legend>
+                <legend>NOTA: o campo não se aplica (NA) pode ser utilizado apenas nos casos de reparo parcial do molde.</legend>
+                <img src="../pictures/checklist.png" required> 
+
+                <!--Tabela 03-->
+                <table style="width:100%" id="tabela03">
+                    <tr>
+                        <th></th>
+                        <th>Ok</th>
+                        <th>NA</th>
+                    </tr>
+
+                    <tr>
+                        <td>Teste do comportamento de medição dos termopares em todas as placas.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada1" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada1" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cabos dos termopares e isolação térmica em perfeitas condições.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada2" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada2" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Substituição dos termopares defeituosos.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada3" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada3" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Plug dos termopares isentos de umidade interna, sujeira e sinais de oxidação.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada4" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada4" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Plug dos termopares com as borrachas de vedação montadas.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada5" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada5" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Plug dos termopares com as tampas de proteção montadas e fixadas.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada6" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada6" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Plug dos termopares com todas as travas funcionando corretamente.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada7" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada7" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Posição dos miolos do plug dos termopares de acordo com o padrão.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada8" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada8" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pino guia (macho x fêmea) do plug dos termopares de acordo com o padrão.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada9" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada9" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Plug das válvulas direcionais, proporcionais e dos transdutores apertados.</td>
+                        <td>
+                            <input type="radio" name="tb03entrada10" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada10" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Caixa de ligação do sistema Dynawidth fechada (JB2).</td>
+                        <td>
+                            <input type="radio" name="tb03entrada11" required>
+                        </td>
+                        <td>
+                            <input type="radio" name="tb03entrada11" required>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </fieldset>
+
+            <!--Observações-->
+            <fieldset>
+                <legend>Observações:</legend>
+                <input type="text" name="observacoesPag5">
+            </fieldset>
+
+            <!--Conferido por:-->
+            <fieldset>
+                <legend>Conferido por:</legend>
+                <input type="text" name="conferidoPorPag5" required>
+            </fieldset>
+
+            <!--Data-->
+            <fieldset>
+                <legend>Data:</legend>
+                <input type="date" name="dataPag5" required>
+            </fieldset>
+
+            <!--Botão para a próxima página-->
+            <button onclick="document.getElementById('pagina6').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none';
+                document.getElementById('pagina2').style.display = 'none';
+                document.getElementById('pagina3').style.display = 'none';
+                document.getElementById('pagina4').style.display = 'none';
+                document.getElementById('pagina5').style.display = 'none';
+                document.getElementById('pagina7').style.display = 'none';"
+                >
+                Próxima
+            </button>
+
+            <!--Botão para a página anterior-->
+            <button onclick="document.getElementById('pagina4').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none'
+                document.getElementById('pagina2').style.display = 'none'
+                document.getElementById('pagina3').style.display = 'none'
+                document.getElementById('pagina5').style.display = 'none'
+                document.getElementById('pagina6').style.display = 'none'
+                document.getElementById('pagina7').style.display = 'none'"
+                >
+                Voltar
+            </button>
+
+        </div>
+
+        <!--****************************CONTEÚDO DA PÁGINA 6****************************-->
+
+        <div id="pagina6">
+
+            <!--Sensor de Nível-->
+            <fieldset>
+                <legend>Sensor de Nível</legend>
+                <div>
+                    Sensor N°:<br>            
+                    <input type="number" name="numeroSensor" required>
+                </div>
+            </fieldset>
+
+            <!--Resistência - Pinos-->
+            <fieldset>
+                <legend>Resistência - Pinos</legend>
+
+                <div>
+                    1 - 2 (140 ... 300Ω) *<br>            
+                    <input type="number" name="pino_1_2" required>
+                </div>
+                
+                <div>
+                    3 - 4 (0 ... 2Ω) *<br>            
+                    <input type="number" name="pino_3_4" required>
+                </div>
+                
+                <div>
+                    1 - 5 (70 ... 150Ω) *<br>            
+                    <input type="number" name="pino_1_5" required>
+                </div>
+                
+                <div>
+                    3 - 5 (0 ... 1Ω) *<br>            
+                    <input type="number" name="pino_3_5" required>
+                </div>
+                
+                <div>
+                    7 - 8 (0 ... 1Ω) *<br>            
+                    <input type="number" name="pino_7_8" required>
+                </div>
+                
+                <div>
+                    8 - 9 (100 ... 140Ω) *<br>            
+                    <input type="number" name="pino_8_9" required>
+                </div>
+                
+                <div>
+                    15 - 16 (3 ... 10Ω) *<br>            
+                    <input type="number" name="pino_15_16" required>
+                </div>
+                
+                <div>
+                    10 - Corpo do Sensor (0 ... 1Ω) *<br>            
+                    <input type="number" name="pino_10_corpo" required>
+                </div>
+            </fieldset>
+
+            <!--Isolamento - Pinos-->
+            <fieldset>
+                <legend>Isolamento - Pinos</legend>
+                <legend>
+                    Nota <br>
+                    ● R &gt 10 MΩ - Sensor perfeito; <br>
+                    ● 0,1 &lt R &lt 10 MΩ - Estado de deterioração do isolamento; <br>
+                    ● R &lt 0,1 MΩ - Defeito no sensor. Necessita substituição. <br>
+                </legend>
+
+                <div>
+                    5 - 6<br>            
+                    <input type="number" name="isolamento_5_6" required>
+                </div>
+
+                <div>
+                    5 - 8<br>            
+                    <input type="number" name="isolamento_5_8" required>
+                </div>
+
+                <div>
+                    5 - 10<br>            
+                    <input type="number" name="isolamento_5_10" required>
+                </div>
+
+                <div>
+                    5 - 15<br>            
+                    <input type="number" name="isolamento_5_15" required>
+                </div>
+
+                <div>
+                    6 - 8<br>            
+                    <input type="number" name="isolamento_6_8" required>
+                </div>
+
+                <div>
+                    6 - 10<br>            
+                    <input type="number" name="isolamento_6_10" required>
+                </div>
+
+                <div>
+                    6 - 15<br>            
+                    <input type="number" name="isolamento_6_15" required>
+                </div>
+
+                <div>
+                    8 - 10<br>            
+                    <input type="number" name="isolamento_8_10" required>
+                </div>
+
+                <div>
+                    8 - 15<br>            
+                    <input type="number" name="isolamento_8_15" required>
+                </div>
+
+                <div>
+                    10 - 15<br>            
+                    <input type="number" name="isolamento_10_15" required>
+                </div>
+
+                <div>
+                    <img src="../pictures/pinos.png" required> 
+                </div>
+
+            </fieldset>
+
+            <!--Conferido por:-->
+            <fieldset>
+                <legend>Conferido por:</legend>
+                <input type="text" name="conferidoPorPag6" required>
+            </fieldset>
+
+            <!--Data-->
+            <fieldset>
+                <legend>Data:</legend>
+                <input type="date" name="dataPag6" required>
+            </fieldset>
+
+            <!--Botão para a próxima página-->
+            <button onclick="document.getElementById('pagina7').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none';
+                document.getElementById('pagina2').style.display = 'none';
+                document.getElementById('pagina3').style.display = 'none';
+                document.getElementById('pagina4').style.display = 'none';
+                document.getElementById('pagina5').style.display = 'none';
+                document.getElementById('pagina6').style.display = 'none';"
+                >
+                Próxima
+            </button>
+
+            <!--Botão para a página anterior-->
+            <button onclick="document.getElementById('pagina5').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none'
+                document.getElementById('pagina2').style.display = 'none'
+                document.getElementById('pagina3').style.display = 'none'
+                document.getElementById('pagina4').style.display = 'none'
+                document.getElementById('pagina6').style.display = 'none'
+                document.getElementById('pagina7').style.display = 'none'"
+                >
+                Voltar
+            </button>
+            
+        </div>
+
+        <!--****************************CONTEÚDO DA PÁGINA 7****************************-->
+        <div id="pagina7">
+            <fieldset>
+                <!--Inspeção Final-->
+                <legend>Inspeção Final</legend>
+
+                <!--Tabela 04-->
+                <table style="width:100%" id="tabela04">
+                        <tr>
+                            <th></th>
+                            <th>Ok</th>
+                        </tr>
+    
+                        <tr>
+                            <td>1. Preenchimento do relatório do molde</td>
+                            <td>
+                                <input type="radio" name="tb04entrada1" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>2. Preenchimento da ficha de liberação do molde</td>
+                            <td>
+                                <input type="radio" name="tb04entrada2" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>3. Limpeza do molde, isento de limalhas, carepas e/ou break-out.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada3" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>4. Tampas de proteção dos tirantes dos rolos de pé montadas e isoladas com silicone.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada4" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>5. Tampas de proteção dos tirantes das guias laterais montadas.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada5" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>6. Topo da placa estreita protegido por massa de calafetar</td>
+                            <td>
+                                <input type="radio" name="tb04entrada6" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>7. Todas as bases das porcas de travamento do molde estão limpas e lubrificadas.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada7" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>8. Proteções isentas de avarias.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada8" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>9. Verificar se os engates rápido estão protegidos por tampas ou fita crepe.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada9" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>10. Conexões isentas de vazamento.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada10" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>11. Flexíveis e mangueiras em boas condições, distorcidas e sem vazamento.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada11" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>12. Tubos em boas condições, sem amassados e sem vazamento.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada12" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>13. Distribuidores de graxa em bom estado e sem vazamentos.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada13" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>14. Limpeza dos canais dos rolos de pé</td>
+                            <td>
+                                <input type="radio" name="tb04entrada14" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>15. Face do sensor limpa</td>
+                            <td>
+                                <input type="radio" name="tb04entrada15" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>16. Tampa do sensor limpa e sem empenos</td>
+                            <td>
+                                <input type="radio" name="tb04entrada16" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>17. Papel isolante em bom estado de conservação</td>
+                            <td>
+                                <input type="radio" name="tb04entrada17" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>18. Verificar se o box do termopares estão, tampados e fixos à estrutura do molde.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada18" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>19. Porca de ajuste dos cilindros de clamping travada e lubrificada.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada19" required>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td>20. Parafuso excêntrico girando livre e lubrificado.</td>
+                            <td>
+                                <input type="radio" name="tb04entrada19" required>
+                            </td>
+                        </tr>
+                </table>
+            </fieldset>
+
+            <!--Observações-->
+            <fieldset>
+                <legend>Observações:</legend>
+                <input type="text" name="observacoesPag7">
+            </fieldset>
+
+            <!--Conferido por:-->
+            <fieldset>
+                <legend>Conferido por:</legend>
+                <input type="text" name="conferidoPorPag7" required>
+            </fieldset>
+
+            <!--Data-->
+            <fieldset>
+                <legend>Data:</legend>
+                <input type="date" name="dataPag7" required>
+            </fieldset>
+
+            <!--Botão para cadastrar-->
+            <button>Cadastrar</button>
+
+            <!--Botão para a página anterior-->
+            <button onclick="document.getElementById('pagina6').style.display = 'block'; 
+                document.getElementById('pagina1').style.display = 'none'
+                document.getElementById('pagina2').style.display = 'none'
+                document.getElementById('pagina3').style.display = 'none'
+                document.getElementById('pagina4').style.display = 'none'
+                document.getElementById('pagina5').style.display = 'none'
+                document.getElementById('pagina7').style.display = 'none'"
+                >
+                Voltar
+            </button>
+        </div>
+
+    </body>
+</html>
